@@ -27,18 +27,25 @@ def word_length_std_dev(words_str):
     mean = 0
     for i in lengths_list:
         mean += i
-    mean /= len(lengths_list)
+    try:
+        mean /= len(lengths_list)
     
-    sum = 0
-    for i in lengths_list:
-        sum += (i - mean)**2
-    sum /= (len(lengths_list) - 1)
+        sum = 0
+        for i in lengths_list:
+            sum += (i - mean)**2
+        sum /= (len(lengths_list) - 1)
 
-    std_dev = sum**0.5
-    return std_dev
-
+        std_dev = sum**0.5
+        return std_dev
+    except:
+        print("Error: Divide by zero")
+        return(None)
 
 
 #print("The standard deviation of the lengths of all words given is", word_length_std_dev(str(input("Enter anything: "))) + ".")
-usr_input = "Hello Worlds"
-print("The standard deviation of the lengths of all words given is", str(word_length_std_dev(usr_input)) + ".")
+#usr_input = "Hello Worlds"
+#usr_input = "Hello  World    Hello        World"
+#usr_input = " Hello World"
+#usr_input = ""
+#usr_input = " "
+#print("The standard deviation of the lengths of all words given is", str(word_length_std_dev(usr_input)) + ".")
