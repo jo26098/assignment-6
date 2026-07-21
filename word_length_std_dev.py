@@ -34,8 +34,6 @@ def word_length_std_dev(words_str):
         sum += (i - mean)**2
     sum /= (len(lengths_list) - 1)
 
-    print(sum)
-
     std_dev = sum**0.5
     return std_dev
 
