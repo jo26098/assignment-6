@@ -34,11 +34,13 @@ def word_length_std_dev(words_str):
         sum += (i - mean)**2
     sum /= (len(lengths_list) - 1)
 
+    print(sum)
+
     std_dev = sum**0.5
     return std_dev
 
 
 
 #print("The standard deviation of the lengths of all words given is", word_length_std_dev(str(input("Enter anything: "))) + ".")
-#usr_input = "Hello World"
-#print("The standard deviation of the lengths of all words given is", str(word_length_std_dev(usr_input)) + ".")
+usr_input = "Hello Worlds"
+print("The standard deviation of the lengths of all words given is", str(word_length_std_dev(usr_input)) + ".")
